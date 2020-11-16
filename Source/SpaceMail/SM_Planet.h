@@ -24,26 +24,32 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, Category="Config")
+	UPROPERTY(BlueprintReadWrite, Category="Config")
 	float PlanetSize = 1000;
 
-	UPROPERTY(VisibleAnywhere, Category="Physics")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Physics")
 	USphereComponent* GravitySphere;
 
-	UPROPERTY(VisibleAnywhere, Category="Component")
+	UPROPERTY(BlueprintReadWrite, Category="Component")
 	USphereComponent* PlanetSphere;
 	
 	UPROPERTY(VisibleAnywhere, Category="Component")
 	UStaticMeshComponent* StaticMesh;
 
+	UFUNCTION(BlueprintCallable)
+    void PullOverlappingActorsToPlanet(UMeshComponent* SphereComponent);
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditAnywhere, Category="Physics")
+	UPROPERTY(BlueprintReadWrite, Category="Physics")
 	float GravitationPullStrength;
 
-	UPROPERTY(EditAnywhere, Category="Physics")
+	UPROPERTY(BlueprintReadWrite, Category="Physics")
+	float AtmospherePullStrength;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Physics")
 	float GravitationSphereSize;
 
 private:

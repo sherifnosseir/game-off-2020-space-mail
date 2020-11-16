@@ -53,3 +53,19 @@ void ASM_Planet::AttractOverlappingActors()
     }
 }
 
+void ASM_Planet::PullOverlappingActorsToPlanet(UMeshComponent* SphereComponent)
+{
+	TArray<UPrimitiveComponent*> OverlappingComponents;
+	SphereComponent->GetOverlappingComponents(OverlappingComponents);
+	for (auto Component : OverlappingComponents) 
+	{
+		if (Component && Component->IsSimulatingPhysics())
+		{
+			const float SphereRadius = GravitySphere->GetScaledSphereRadius();
+			const float Strength = -GravitationPullStrength*10000;
+
+			Component->AddRadialForce(GetActorLocation(), SphereRadius, Strength, ERadialImpulseFalloff::RIF_Constant, true);
+		}
+	}
+}
+
