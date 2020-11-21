@@ -24,14 +24,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a70d5ef6-14d5-41ca-a0e3-fe3e26cbcbfa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceMail/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceMail/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/2DSideScrollerCPP/Maps/2DSideScrollerExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/2DSideScrollerCPP/Maps/2DSideScrollerExampleMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/BP_Cargo.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Game/Blueprints/BP_Cargo.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/BP_Cargo.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/BP_Planet.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Game/Blueprints/BP_Planet.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/M_Atmosphere.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/M_Atmosphere_Earth.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/M_Attraction.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/M_Attraction_Gravity.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/Player/BP_GameWidget.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/Player/BP_Player.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Game/Blueprints/Player/BP_Player.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Game/Blueprints/Player/BP_PlayerGizmos.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Game/Blueprints/Player/BP_PlayerGizmos.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SpaceMail/SM_Planet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SpaceMail/SM_Planet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SpaceMail/SM_Planet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SpaceMail/SM_Planet.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,6 +235,7 @@
       <workItem from="1604788694820" duration="1713000" />
       <workItem from="1605139276112" duration="3459000" />
       <workItem from="1605151129554" duration="1145000" />
+      <workItem from="1605992727676" duration="632000" />
     </task>
     <servers />
   </component>
