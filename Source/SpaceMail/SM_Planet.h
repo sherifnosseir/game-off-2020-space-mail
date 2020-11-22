@@ -8,15 +8,14 @@
 #include "GameFramework/Actor.h"
 #include "SM_Planet.generated.h"
 
-class USphereComponent;
-class UStatichMeshComponent;
+class UStaticMeshComponent;
 
 UCLASS()
 class SPACEMAIL_API ASM_Planet : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	ASM_Planet();
 
@@ -24,34 +23,26 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(BlueprintReadWrite, Category="Config")
-	float PlanetSize = 1000;
+	// The sphere where gravity starts affecting incoming actors
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Physics")
+	UStaticMeshComponent* GravitySphere;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Physics")
-	USphereComponent* GravitySphere;
+	// The planet atmosphere, once an object enters the atmosphere, it should not escape
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Component")
+	UStaticMeshComponent* AtmosphereSphere;
 
-	UPROPERTY(BlueprintReadWrite, Category="Component")
-	USphereComponent* PlanetSphere;
-	
-	UPROPERTY(VisibleAnywhere, Category="Component")
-	UStaticMeshComponent* StaticMesh;
+	// The sphere for the planet
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Component")
+	UStaticMeshComponent* PlanetSphere;
 
 	UFUNCTION(BlueprintCallable)
-    void PullOverlappingActorsToPlanet(UMeshComponent* SphereComponent);
+    void PullOverlappingActorsToPlanet(UMeshComponent* SphereComponent, float Strength) const;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// The strength of the planet's gravity pull
 	UPROPERTY(BlueprintReadWrite, Category="Physics")
-	float GravitationPullStrength;
-
-	UPROPERTY(BlueprintReadWrite, Category="Physics")
-	float AtmospherePullStrength;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category="Physics")
-	float GravitationSphereSize;
-
-private:
-	void AttractOverlappingActors();
+	float GravitationPullStrength = 3000;
 };
